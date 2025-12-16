@@ -1,0 +1,29 @@
+# GalacticfyCore configuration
+#
+# If you do NOT have a DB server (MariaDB/MySQL/Postgres):
+# - Keep database.mode: AUTO (recommended)
+# - Configure sqlite.file (default is fine)
+#
+# AUTO will try external first and if that fails it will use SQLite.
+
+database:
+  # Modes: AUTO | EXTERNAL | SQLITE | MEMORY
+  mode: AUTO
+
+  external:
+    # Vendor: MARIADB | MYSQL | POSTGRES
+    vendor: MARIADB
+    host: localhost
+    port: 3306
+    database: galacticfycore
+    username: galacticfy
+    password: "change-me"
+
+    # Optional JDBC params (without leading '?')
+    params: "useUnicode=true&characterEncoding=utf8&useSSL=false"
+
+  sqlite:
+    # Relative to plugins/GalacticfyCore/ (Velocity data directory).
+    file: "galacticfycore.db"
+    # SQLite pragmas applied on connect.
+    pragmas: "foreign_keys=ON;journal_mode=WAL;synchronous=NORMAL"

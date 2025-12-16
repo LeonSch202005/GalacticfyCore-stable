@@ -1,0 +1,11 @@
+{
+  "id": "galacticfycore",
+  "name": "GalacticfyCore",
+  "version": "0.4.5",
+  "description": "Core Velocity plugin for the Galacticfy Network.",
+  "authors": [
+    "Leon"
+  ],
+  "url": "https://galacticfy.de",
+  "main": "de.galacticfy.core.GalacticfyCore"
+}
